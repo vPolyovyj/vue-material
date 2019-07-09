@@ -84,7 +84,7 @@
   function getDrawers (children) {
     const drawerVnodes = children.filter(child => {
       const tag = child.data.slot || normilizeTagName(child.componentOptions.tag)
-      return tag === 'md-app-drawer'
+      return tag.indexOf('md-app-drawer') === 0
     })
     return drawerVnodes.length ? drawerVnodes : []
   }
